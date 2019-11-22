@@ -1,0 +1,86 @@
+testbed:
+  name: 'ma_new_tb'
+devices:
+  csr1000v-1:
+      type: asr1k
+      os: "iosxe"
+      alias: 'helper'
+      tacacs:
+          login_prompt: 'login:'
+          password_prompt: 'Password:'
+          username: cisco
+      passwords:
+          tacacs: cisco
+          enable: cisco
+          line: cisco
+      connections:
+          defaults:
+            class: 'unicon.Unicon'
+          a:
+              protocol: telnet
+              ip: "172.25.192.90"
+              port: 17000
+
+
+
+#
+#devices:
+#    DC-CORE:
+#        type: 'switch'
+#        alias: 'DC-CORE'
+#        os: 'iosxe'
+#        credentials:
+#            default:
+#                username: admin
+#                password: Dc@jnu#@!del
+##            enable:
+##                password: ASK()
+#        connections:
+#          defaults:
+#            class: 'unicon.Unicon'
+#          cli:
+#            protocol: telnet
+#            init_exec_commands: []
+#            init_config_commands: []
+#            ip: '10.101.0.4'
+#
+#
+#    CIS-ACADEMIC-CORE:
+#      type: 'switch'
+#      alias: 'CIS-ACADEMIC-CORE'
+#      os: 'iosxe'
+#      credentials:
+#        default:
+#          username: admin
+#          password: Acad@jnu#@!del
+##        enable:
+##          password: cisco
+#      connections:
+#        defaults:
+#          class: 'unicon.Unicon'
+#        cli:
+#          protocol: telnet
+#          init_exec_commands: []
+#          init_config_commands: []
+#          ip: '10.101.0.2'
+#
+#
+#
+#    CIS-CAMPUS-CORE:
+#      type: 'switch'
+#      alias: 'CIS-CAMPUS-CORE'
+#      os: 'iosxe'
+#      credentials:
+#        default:
+#          username: admin
+#          password: Campus@jnu#@!del
+##        enable:
+##          password: cisco
+#      connections:
+#        defaults:
+#          class: 'unicon.Unicon'
+#        cli:
+#          protocol: telnet
+#          init_exec_commands: []
+#          init_config_commands: []
+#          ip: '10.101.0.1'

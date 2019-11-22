@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on linux)" generated="20191121 13:05:02.527" rpa="false">
+<suite id="s1" name="QA Testing" source="/Pylab/NetDevOps-Testing/codes/Production/Test_Cases/QA_Testing.robot">
+<test id="s1-t1" name="Layer_2 Tests">
+<kw name="Layer 2 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:05.077" level="INFO">${output} = {'status': True, 'time': 2.16}</msg>
+<status status="PASS" starttime="20191121 13:05:03.011" endtime="20191121 13:05:05.077"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:05.077" endtime="20191121 13:05:05.078"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 2.50</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:05.078" endtime="20191121 13:05:05.079"></status>
+</kw>
+<status status="PASS" starttime="20191121 13:05:03.011" endtime="20191121 13:05:05.079"></status>
+</kw>
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<status status="PASS" starttime="20191121 13:05:03.010" endtime="20191121 13:05:05.079" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Layer_3 Tests">
+<kw name="Layer 2 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:07.142" level="INFO">${output} = {'status': True, 'time': 2.18}</msg>
+<status status="PASS" starttime="20191121 13:05:05.080" endtime="20191121 13:05:07.142"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:07.142" endtime="20191121 13:05:07.143"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 2.50</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:07.143" endtime="20191121 13:05:07.143"></status>
+</kw>
+<status status="PASS" starttime="20191121 13:05:05.080" endtime="20191121 13:05:07.144"></status>
+</kw>
+<kw name="Layer 2.1 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:09.206" level="INFO">${output} = {'status': True, 'time': 2.14}</msg>
+<status status="PASS" starttime="20191121 13:05:07.145" endtime="20191121 13:05:09.206"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:09.207" endtime="20191121 13:05:09.207"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 0.05</arg>
+</arguments>
+<msg timestamp="20191121 13:05:09.208" level="FAIL">'2.14 &lt; 0.05' should be true.</msg>
+<status status="FAIL" starttime="20191121 13:05:09.207" endtime="20191121 13:05:09.208"></status>
+</kw>
+<status status="FAIL" starttime="20191121 13:05:07.144" endtime="20191121 13:05:09.208"></status>
+</kw>
+<tags>
+<tag>Layer 3</tag>
+</tags>
+<status status="FAIL" starttime="20191121 13:05:05.079" endtime="20191121 13:05:09.209" critical="yes">'2.14 &lt; 0.05' should be true.</status>
+</test>
+<test id="s1-t3" name="Wireless Tests">
+<kw name="Layer 2 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:11.272" level="INFO">${output} = {'status': True, 'time': 2.15}</msg>
+<status status="PASS" starttime="20191121 13:05:09.210" endtime="20191121 13:05:11.272"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:11.272" endtime="20191121 13:05:11.273"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 2.50</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:11.273" endtime="20191121 13:05:11.273"></status>
+</kw>
+<status status="PASS" starttime="20191121 13:05:09.210" endtime="20191121 13:05:11.274"></status>
+</kw>
+<tags>
+<tag>Wireless</tag>
+</tags>
+<status status="PASS" starttime="20191121 13:05:09.209" endtime="20191121 13:05:11.274" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Infrastructure Tests">
+<kw name="Layer 2 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:13.335" level="INFO">${output} = {'status': True, 'time': 2.14}</msg>
+<status status="PASS" starttime="20191121 13:05:11.275" endtime="20191121 13:05:13.336"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:13.336" endtime="20191121 13:05:13.337"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 2.50</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:13.337" endtime="20191121 13:05:13.337"></status>
+</kw>
+<status status="PASS" starttime="20191121 13:05:11.275" endtime="20191121 13:05:13.337"></status>
+</kw>
+<tags>
+<tag>Infra</tag>
+</tags>
+<status status="PASS" starttime="20191121 13:05:11.274" endtime="20191121 13:05:13.338" critical="yes"></status>
+</test>
+<test id="s1-t5" name="UI Tests">
+<kw name="Layer 2 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:15.527" level="INFO">${output} = {'status': True, 'time': 2.15}</msg>
+<status status="PASS" starttime="20191121 13:05:13.339" endtime="20191121 13:05:15.527"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:15.528" endtime="20191121 13:05:15.528"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 2.50</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:15.528" endtime="20191121 13:05:15.529"></status>
+</kw>
+<status status="PASS" starttime="20191121 13:05:13.338" endtime="20191121 13:05:15.529"></status>
+</kw>
+<tags>
+<tag>App_Servers</tag>
+</tags>
+<status status="PASS" starttime="20191121 13:05:13.338" endtime="20191121 13:05:15.529" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Validation Tests">
+<kw name="Layer 2 ICMP Tests" library="L2_Resources">
+<tags>
+<tag>Layer 2</tag>
+</tags>
+<kw name="Ping Rtt" library="L2_Library">
+<arguments>
+<arg>${HOST}</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20191121 13:05:17.591" level="INFO">${output} = {'status': True, 'time': 2.14}</msg>
+<status status="PASS" starttime="20191121 13:05:15.531" endtime="20191121 13:05:17.591"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[status]</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:17.591" endtime="20191121 13:05:17.592"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${output}[time] &lt; 2.50</arg>
+</arguments>
+<status status="PASS" starttime="20191121 13:05:17.592" endtime="20191121 13:05:17.593"></status>
+</kw>
+<status status="PASS" starttime="20191121 13:05:15.530" endtime="20191121 13:05:17.593"></status>
+</kw>
+<tags>
+<tag>Validation Tests</tag>
+</tags>
+<status status="PASS" starttime="20191121 13:05:15.530" endtime="20191121 13:05:17.593" critical="yes"></status>
+</test>
+<doc>Quality Assurance Testing</doc>
+<status status="FAIL" starttime="20191121 13:05:02.528" endtime="20191121 13:05:17.595"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1">Critical Tests</stat>
+<stat pass="5" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">App_Servers</stat>
+<stat pass="1" fail="0">Infra</stat>
+<stat pass="1" fail="0">Layer 2</stat>
+<stat pass="0" fail="1">Layer 3</stat>
+<stat pass="1" fail="0">Validation Tests</stat>
+<stat pass="1" fail="0">Wireless</stat>
+</tag>
+<suite>
+<stat pass="5" fail="1" id="s1" name="QA Testing">QA Testing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
